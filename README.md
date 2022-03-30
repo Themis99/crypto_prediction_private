@@ -11,6 +11,6 @@ mporeis na kaneis import to inference.py kai na kaleseis mono tin sunartisi _pre
 
 a) tin timi pou problepei gia tin epomeni mera
 
-b) ena sima an 8a kiniuei h timi panw i katw (up/down)
+b) ena sima an 8a kini8ei h timi panw i katw (up/down)
 
 Me basi auto mporeis na kaneis peiramata gia na deis an bgazei kala apotelesmata se pragmatiko xrono
