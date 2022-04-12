@@ -1,0 +1,35 @@
+===================================================
+Blockchain features:
+Number of transactions in blockchain per day +3
+Average block size (KB) +2
+Number of sent by addresses+1
+Number of active addresses+1
+Average mining difficulty (Hash/day) +3
+Average hash rate (hash/s) +2
+Mining Profitability (USD)+1
+Sent coins (USD)
+Average & Median transaction fee (USD) +3
+Average block time (minutes)
+Average & Median Transaction Value (USD)+2
+Average Fee Percentage in Total Block Reward
+Top 100 Richest Addresses to Total coins
+Miner Revenue (USD) +2
+Number of coins in circulation +3
+==================================================
+Statistical features:
+Simple Moving Average +1
+Weighted Moving Average
+Exponential Moving Average
+Double Exponential Moving Average
+Triple Exponential Moving Average
+Standard Deviation
+Variance
+Relative Strength Index
+Rate of Change+1
+Bollinger Bands +1
+Moving Average Convergence Divergence +2
+
+
+=================================================
+Social features
+Fear and greed index

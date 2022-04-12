@@ -1,0 +1,2 @@
+https://github.com/philipperemy/keras-tcn
+https://medium.com/@rohansawant7978/forecasting-of-bitcoin-price-using-machine-learning-deep-learning-techniques-93bf662f46ab
