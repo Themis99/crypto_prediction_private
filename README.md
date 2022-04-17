@@ -1,7 +1,9 @@
 # bitcoin_prediction
 
 
-Απότελέσματα ερευνών
+[How to work with github markdown tables](https://www.pluralsight.com/guides/working-tables-github-markdown)
+
+#### Αποτελέσματα ερευνών
 
 | Signal Date | Result | Up/Down |
 | --------------- | --------------- | --------------- |
