@@ -1,27 +1,28 @@
-from data_collector import retrieve_data
-from rolling import rolling_zscore
-from tcn import TCN, tcn_full_summary
+from datetime import date
+
 import tensorflow as tf
 from tensorflow import keras
-from datetime import date
+
+from data_collector import retrieve_data
+from rolling import rolling_zscore
 
 tf.random.set_seed(42)
 
-class predictor:
-    def __init__(self,LAG):
-        self.LAG = LAG
 
+class predictor:
+    def __init__(self, LAG):
+        self.LAG = LAG
 
     def take_data(self):
 
-        #retrieve data
+        # retrieve data
         data = retrieve_data()
-        data = data.tail(self.LAG*2+1)
+        data = data.tail(self.LAG * 2 + 1)
         return data
 
     def preprocess(self):
 
-        #preprocess data
+        # preprocess data
         data = self.take_data()
         # rolling z-score
         roll_z = rolling_zscore(window=self.LAG)
@@ -30,29 +31,27 @@ class predictor:
 
         return data_scaled
 
-    def predict(self,PATH):
+    def predict(self, PATH):
 
-        #take initial data
+        # take initial data
         data_init = self.take_data()
 
-        #take previous close date
+        # take previous close date
         prev_date = data_init.index[-1]
         previous_date = str((prev_date.strftime("%Y-%m-%d")))
 
-        #take prediction date
+        # take prediction date
         today = date.today()
         End_date = str((today.strftime("%Y-%m-%d")))
 
-        #no date
+        # no date
         data_init.reset_index(inplace=True)
         data_init = data_init.iloc[:, 1:]  # no date
 
-
-
-        #load model
+        # load model
         model = keras.models.load_model(PATH)
 
-        #predict
+        # predict
         data_preprocessed = self.preprocess()
         data_preprocessed = data_preprocessed.values
         data_preprocessed = data_preprocessed.reshape(1, self.LAG, 6)
@@ -72,16 +71,7 @@ class predictor:
 
         if predict > previous_close:
             signal = 'UP'
-            return signal, predict, End_date, previous_close,previous_date
+            return signal, predict, End_date, previous_close, previous_date
         elif predict < previous_close:
             signal = 'DOWN'
             return signal, predict, End_date, previous_close, previous_date
-
-
-
-
-
-
-
-
-

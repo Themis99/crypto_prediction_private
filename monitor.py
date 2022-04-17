@@ -20,6 +20,11 @@ if __name__ == "__main__":
 
     print(message)
 
-    baseUrl = 'https://api.telegram.org/bot5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To/sendMessage?chat_id=-606025109&text=' + message
+    # Get Chat id for our bot with apikey = 5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To
+    # https://api.telegram.org/bot5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To/getUpdates
+    # chat id = -1001720397362
+
+    chatId = '-1001720397362'
+    baseUrl = 'https://api.telegram.org/bot5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To/sendMessage?chat_id=' + chatId + '&text=' + message
 
     requests.get(baseUrl)
