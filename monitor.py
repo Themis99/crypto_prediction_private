@@ -10,7 +10,7 @@ if __name__ == "__main__":
     pred = predictor(LAG=58)  # object predictor
     signal, prediction, end_date, prev_close, prev_date = pred.predict(PATH=PATH)  # predict
 
-    signalString = '⬆️' if 'UP' else '⬇️'
+    signalString = '⬆️' if signal == 'UP' else '⬇️'
     message = 'Using model : [ ' + model + ' ]'\
              ' \n\nBTC price : [ ' + str(prediction) + ' $ ] '\
              ' For Date : [ ' + end_date + ' ]'\
