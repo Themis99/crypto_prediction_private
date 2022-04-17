@@ -63,10 +63,12 @@ class predictor:
         mean = last['Close'].mean()
         std = last['Close'].std()
         predict = predict[0][0] * std + mean
+        predict = round(predict, 2)
 
         # take the previous day
         previous_day = data_init.tail(1)
         previous_close = previous_day['Close'].item()
+        previous_close = round(previous_close, 2))
 
         if predict > previous_close:
             signal = 'UP'
