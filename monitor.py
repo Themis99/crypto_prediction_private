@@ -12,10 +12,10 @@ if __name__ == "__main__":
 
     signalString = '⬆️' if 'UP' else '⬇️'
     message = 'Using model : [ ' + model + ' ]'\
-             ' \n\nBTC price : [ ' + str(prediction) + ' ] $'\
+             ' \n\nBTC price : [ ' + str(prediction) + ' $ ] '\
              ' For Date : [ ' + end_date + ' ]'\
              ' \n\nDirection : ' + signalString + \
-             ' \n\nPREVIOUS CLOSE AT: [ ' + str(prev_close) + ' ] $' \
+             ' \n\nPREVIOUS CLOSE AT: [ ' + str(prev_close) + ' $ ] ' \
              ' For Date : [ ' + prev_date + ' ]'
 
     print(message)
