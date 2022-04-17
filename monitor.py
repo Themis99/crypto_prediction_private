@@ -11,7 +11,7 @@ if __name__ == "__main__":
     signal, prediction, end_date, prev_close, prev_date = pred.predict(PATH=PATH)  # predict
 
     signalString = '⬆️' if 'UP' else '⬇️'
-    message = 'Using Model : ' + model + \
+    message = 'Using model : [ ' + model + ' ]'\
              ' \n\nBTC price : [ ' + str(prediction) + ' ] $'\
              ' For Date : [ ' + end_date + ' ]'\
              ' \n\nDirection : ' + signalString + \
