@@ -1,7 +1,7 @@
 from predictor import predictor
 import requests
 
-model = 'model_exp1_alt'
+model = 'model_exp1'
 
 if __name__ == "__main__":
 
