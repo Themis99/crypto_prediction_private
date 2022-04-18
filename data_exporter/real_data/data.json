@@ -1,0 +1,11 @@
+{
+    "model_exp1": {
+        "2022-04-19": {
+            "end_date": "2022-04-19",
+            "prediction": 39960.76,
+            "signal": "UP",
+            "prev_close": 39716.95,
+            "prev_date": "2022-04-17"
+        }
+    }
+}

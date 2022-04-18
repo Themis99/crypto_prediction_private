@@ -1,5 +1,5 @@
+from data_exporter import data_exporter
 from predictor import predictor
-import requests
 
 model = 'model_exp1'
 
@@ -20,6 +20,7 @@ if __name__ == "__main__":
 
     print(message)
 
+    # ------------------------------ THE BELOW CODE IS FOR THE TELEGRAM BOT ------------------------------
     # Get Chat id for our bot with apikey = 5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To
     # https://api.telegram.org/bot5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To/getUpdates
     # chat id = -1001720397362
@@ -27,4 +28,9 @@ if __name__ == "__main__":
     chatId = '-1001720397362'
     baseUrl = 'https://api.telegram.org/bot5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To/sendMessage?chat_id=' + chatId + '&text=' + message
 
-    requests.get(baseUrl)
+    # requests.get(baseUrl)
+
+    # -------------------- THE BELOW CODE IS FOR EXPORTING THE DATA TO JSON FILE -------------------------
+
+    # Export data to json file for each unique day we run this program
+    data_exporter.export_data(False, model, prediction, prev_close, signal, prev_date, end_date)
