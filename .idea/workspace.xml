@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36b2b1c1-72d3-4948-9f73-e39c0024f14c" name="Changes" comment="Created Alex Monitor etc">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +240,7 @@
       <workItem from="1650220106387" duration="279000" />
       <workItem from="1650282418072" duration="11310000" />
       <workItem from="1650386742018" duration="1300000" />
-      <workItem from="1650402756153" duration="1570000" />
+      <workItem from="1650402756153" duration="1656000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed warnings + added model path for each prediction">
       <created>1650217053984</created>
@@ -339,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650404073113</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Created Alex Monitor etc">
+      <created>1650404348385</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1650404348385</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
