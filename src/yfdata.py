@@ -2,7 +2,6 @@ import requests
 import pandas as pd
 import yfinance as yf
 
-
 def yahoo_retriever():
     r = requests.get('http://api.alternative.me/fng/?limit=0')
     df = pd.DataFrame(r.json()['data'])

@@ -1,5 +1,5 @@
-from predictors.predictor import predictor
-import data_collector
+from src import data_collector
+from src.predictors.predictor import predictor
 
 def winloss(prev_pred, previous_signal):
 
@@ -19,7 +19,7 @@ def winloss(prev_pred, previous_signal):
 
 if __name__ == "__main__":
     LAG = 58 # days to look back
-    PATH = 'C:\\Users\\Themis\\Desktop\\Cuda_bitcoin_pred\\models\\model_exp1_alt' # model path
+    PATH = './models/model_exp1' # model path
     pred = predictor(LAG = 58) #object predictor
     signal, prediction, end_date, prev_close, prev_date = pred.predict(PATH=PATH) #predict
 

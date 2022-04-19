@@ -1,6 +1,7 @@
 import data_exporter_library
-from predictors.predictor import predictor
-import data_collector
+from src.predictors.predictor import predictor
+from src import data_collector
+
 
 def winloss(prev_pred,prev_s):
 
@@ -58,5 +59,5 @@ def predict(model):
 
 if __name__ == "__main__":
 
-    predict('../model_exp1')
-    predict('../model_exp1_alt')
+    predict('../models/model_exp1')
+    predict('../models/model_exp1_alt')

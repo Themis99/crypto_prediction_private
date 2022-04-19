@@ -3,8 +3,8 @@ from datetime import date
 import tensorflow as tf
 from tensorflow import keras
 
-from data_collector import retrieve_data
-from rolling import rolling_zscore
+from src.data_collector import retrieve_data
+from src.rolling import rolling_zscore
 
 tf.random.set_seed(42)
 

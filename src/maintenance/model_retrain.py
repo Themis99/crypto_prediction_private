@@ -1,4 +1,4 @@
-from tcn import TCN, tcn_full_summary
+from tcn import TCN
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.layers import Dense
@@ -11,7 +11,6 @@ import keras_tuner as kt
 from rolling import rolling_zscore
 import os
 import Data_retriever_exp1
-import time
 import pickle
 
 # required for solving issue with cuDNN
