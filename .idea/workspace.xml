@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36b2b1c1-72d3-4948-9f73-e39c0024f14c" name="Changes" comment="Created Alex Monitor etc">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/READ_ME.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_exporter_dir/alex_monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_exporter_dir/alex_monitor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exp1/keras_metadata.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1/keras_metadata.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exp1/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1/saved_model.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exp1/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1/variables/variables.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exp1/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1/variables/variables.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exp1_alt/keras_metadata.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1_alt/keras_metadata.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exp1_alt/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1_alt/saved_model.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exp1_alt/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1_alt/variables/variables.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exp1_alt/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1_alt/variables/variables.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/predictors/predictor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +239,7 @@
       <workItem from="1650220106387" duration="279000" />
       <workItem from="1650282418072" duration="11310000" />
       <workItem from="1650386742018" duration="1300000" />
-      <workItem from="1650402756153" duration="1190000" />
+      <workItem from="1650402756153" duration="1570000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed warnings + added model path for each prediction">
       <created>1650217053984</created>
@@ -344,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650403095802</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Created Alex Monitor etc">
+      <created>1650404073113</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1650404073113</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
