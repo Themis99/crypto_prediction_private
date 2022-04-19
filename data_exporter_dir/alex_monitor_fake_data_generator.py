@@ -1,5 +1,5 @@
 import random
-import data_exporter
+import data_exporter_library
 
 
 # We use this function to generate random data from
@@ -13,7 +13,7 @@ def generate_mock_data(model):
         prev_date = str((random_number - 1)) + '-05-2022'
         end_date = str(random_number) + '-05-2022'
 
-        data_exporter.export_data(True, model, prediction, prev_close, signal, prev_date, end_date)
+        data_exporter_library.export_data(True, model, prediction, prev_close, signal, prev_date, end_date)
 
 
 if __name__ == "__main__":
