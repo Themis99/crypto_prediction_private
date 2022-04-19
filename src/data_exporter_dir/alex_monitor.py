@@ -60,4 +60,4 @@ def predict(model):
 if __name__ == "__main__":
 
     predict('../models/model_exp1')
-    predict('../models/model_exp1_alt')
+    predict('../models/model_exp2')
