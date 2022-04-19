@@ -34,5 +34,14 @@
             "prev_close": 40826.21,
             "prev_date": "2022-04-18"
         }
+    },
+    "../models/model_exp2": {
+        "2022-04-20": {
+            "end_date": "2022-04-20",
+            "prediction": 40032.67,
+            "signal": "DOWN",
+            "prev_close": 40826.21,
+            "prev_date": "2022-04-18"
+        }
     }
 }

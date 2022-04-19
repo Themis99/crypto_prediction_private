@@ -1,5 +1,5 @@
 from src import data_collector
-from src.predictors.predictor import predictor
+from src.predictors.predictor_1 import predictor
 
 def winloss(prev_pred, previous_signal):
 

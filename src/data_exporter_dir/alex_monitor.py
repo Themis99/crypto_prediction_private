@@ -1,5 +1,5 @@
 import data_exporter_library
-from src.predictors.predictor import predictor
+from src.predictors.predictor_1 import predictor
 from src import data_collector
 
 
