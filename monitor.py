@@ -1,7 +1,7 @@
-from predictor import predictor
+from predictors.predictor import predictor
 import data_collector
 
-def winloss(prev_pred,prev_s):
+def winloss(prev_pred, previous_signal):
 
     #take data
     data = data_collector.retrieve_data()
@@ -12,8 +12,8 @@ def winloss(prev_pred,prev_s):
 
     real_s = 'UP' if close_p < close_r else 'DOWN'
 
-    trade = 'WIN' if real_s == prev_s else 'LOSS'
-    out = abs(close_r - prev_pred) if real_s == prev_s else None
+    trade = 'WIN' if real_s == previous_signal else 'LOSS'
+    out = abs(close_r - prev_pred) if real_s == previous_signal else None
 
     return trade,out
 
@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
 
     prev_p = 39960 #χθεσινη προβλεψη (θα τα περνεις απο json)
-    prev_s = 'UP' #χθεσινο σημα (θα το περνεις απο json
+    prev_s = 'UP'  #χθεσινο σημα (θα το περνεις απο json
 
     initial_trade = None # Αν κανουμε την πρωτη μας προβλεψη (πχ με ενα νεο μποτ) επειδη δεν εχουμε χθεσινη (προηγουμενη) προβλεψη πρεπει να αλλαξουμε την συνθηκη με το χερι
 

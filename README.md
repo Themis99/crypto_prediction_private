@@ -1,5 +1,27 @@
 # bitcoin_prediction
 
+Φακελος maintenance: Ενας φακελος που θα χρησιμοποιειται για επανεκπαυδευση του μοντελου σε ολα τα δεδομενα μετα απο ενα χρονικο διαστημα
+
+Φακελος model_exp1: Ο φακελος του μοντελου (δεν αλλαζουμε τιποτα)
+
+data_collector.py: Συλλογη δεδομενων
+yfdata.py: Συλλογη δεδομενων bitcoin 
+rolling.py: Bοηθητικη συναρτηση για τον υπολογισμο του z-score με moving averages
+
+============= Τα βασικα τωρα ==============
+
+predictor.py: Ενα object που κανει predict με δωθεν LAG (Το LAG για αυτο το πειραμα ειναι σταθερο και δεν θελουμε να αλλαξει)
+
+Επιστρεφει:
+
+- signal: Αν θα παει πανω η κατω
+- prediction: Η προβλεψη για το σημερινο close
+- prediction date: Ημερομηνια προβλεψης (Η σημερινη)
+- previous close: προηγουμενο κλεισιμο
+- previous date: Ημερομηνια προηγουμενου κλεισηματος (Η χθεσινη)
+
+monitor.py: Ενα απλο script που καλει την predictor και κανει προβλεψη
+
 
 [How to work with github markdown tables](https://www.pluralsight.com/guides/working-tables-github-markdown)
 

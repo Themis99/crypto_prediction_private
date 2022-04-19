@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36b2b1c1-72d3-4948-9f73-e39c0024f14c" name="Changes" comment="Export Data to JSON">
-      <change afterPath="$PROJECT_DIR$/data_exporter_dir/alex_monitor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_exporter_dir/real_data/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_exporter/data_exporter.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_exporter_dir/data_exporter_library.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_exporter/data_exporter_fake_data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_exporter_dir/alex_monitor_fake_data_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_exporter/fake_data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_exporter_dir/fake_data/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_exporter/real_data/data.json" beforeDir="false" />
+    <list default="true" id="36b2b1c1-72d3-4948-9f73-e39c0024f14c" name="Changes" comment="Created Alex Monitor etc">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/READ_ME.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_exporter_dir/alex_monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_exporter_dir/alex_monitor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exp1/keras_metadata.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1/keras_metadata.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exp1/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1/saved_model.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exp1/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1/variables/variables.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exp1/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1/variables/variables.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exp1_alt/keras_metadata.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1_alt/keras_metadata.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exp1_alt/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1_alt/saved_model.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exp1_alt/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1_alt/variables/variables.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exp1_alt/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_exp1_alt/variables/variables.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/predictors/predictor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +62,8 @@
       <recent name="C:\Users\alexa\PycharmProjects\pythonProject" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexa\PycharmProjects\pythonProject\predictors" />
+      <recent name="C:\Users\alexa\PycharmProjects\pythonProject\models" />
       <recent name="C:\Users\alexa\PycharmProjects\pythonProject\dataExporter\fake_data_for_dev" />
       <recent name="C:\Users\alexa\PycharmProjects\pythonProject\dataExporter" />
     </key>
@@ -203,7 +211,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predictor.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\alexa\PycharmProjects\pythonProject\predictors\predictor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -243,7 +251,7 @@
       <workItem from="1650220106387" duration="279000" />
       <workItem from="1650282418072" duration="11310000" />
       <workItem from="1650386742018" duration="1300000" />
-      <workItem from="1650402756153" duration="255000" />
+      <workItem from="1650402756153" duration="1190000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed warnings + added model path for each prediction">
       <created>1650217053984</created>
@@ -322,7 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650316284056</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Created Alex Monitor etc">
+      <created>1650403061554</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1650403061554</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Created Alex Monitor etc">
+      <created>1650403095802</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1650403095802</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +366,8 @@
     <MESSAGE value="Bug Fixes" />
     <MESSAGE value="Daily Results" />
     <MESSAGE value="Export Data to JSON" />
-    <option name="LAST_COMMIT_MESSAGE" value="Export Data to JSON" />
+    <MESSAGE value="Created Alex Monitor etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Alex Monitor etc" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonProject$inference.coverage" NAME="inference Coverage Results" MODIFIED="1649444057056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

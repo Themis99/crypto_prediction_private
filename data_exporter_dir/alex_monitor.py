@@ -1,5 +1,5 @@
 import data_exporter_library
-from predictor import predictor
+from predictors.predictor import predictor
 import data_collector
 
 def winloss(prev_pred,prev_s):
