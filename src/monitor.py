@@ -1,5 +1,5 @@
 from src import data_collector
-from src.predictors.predictor_1 import predictor
+from src.predictors.predictor_2 import predictor_2
 
 def winloss(prev_pred, previous_signal):
 
@@ -20,7 +20,7 @@ def winloss(prev_pred, previous_signal):
 if __name__ == "__main__":
     LAG = 58 # days to look back
     PATH = 'C:\\Users\\Themis\\Desktop\\Cuda_bitcoin_pred\\models\\model_exp2' # model path ( in case you want to use relative path => ./models/model_exp1 )
-    pred = predictor(LAG = 58) #object predictor
+    pred = predictor_2(LAG = 58) #object predictor
     signal, prediction, end_date, prev_close, prev_date = pred.predict(PATH=PATH) #predict
 
     print('BTC AT: '+str(prediction)+' FOR '+end_date+' SIGNAL: '+signal+' PREVIOUS CLOSE AT: '+str(prev_close)+' FOR '+prev_date)

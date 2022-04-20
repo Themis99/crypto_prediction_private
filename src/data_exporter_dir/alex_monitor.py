@@ -67,7 +67,6 @@ def predict(model):
 
 
 if __name__ == "__main__":
-
     predict('model_exp1')
     predict('model_exp2')
     predict('model_exp3')
