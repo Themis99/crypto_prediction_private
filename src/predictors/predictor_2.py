@@ -9,7 +9,7 @@ from src.rolling import rolling_zscore
 tf.random.set_seed(42)
 
 
-class predictor:
+class predictor_2:
     def __init__(self, LAG):
         self.LAG = LAG
 

@@ -1,13 +1,12 @@
-from data_collector import retrieve_data
-from rolling import rolling_zscore
-from tcn import TCN, tcn_full_summary
 import tensorflow as tf
 from tensorflow import keras
 from datetime import date
+from src.data_collector import retrieve_data
+from src.rolling import rolling_zscore
 
 tf.random.set_seed(42)
 
-class predictor:
+class predictor_3:
     def __init__(self,LAG):
         self.LAG = LAG
 
