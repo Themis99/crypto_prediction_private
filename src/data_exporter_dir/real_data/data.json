@@ -1,0 +1,29 @@
+{
+    "model_exp1": {
+        "2022-04-21": {
+            "end_date": "2022-04-21",
+            "prediction": 40572.73,
+            "signal": "DOWN",
+            "prev_close": 41502.75,
+            "prev_date": "2022-04-19"
+        }
+    },
+    "model_exp2": {
+        "2022-04-21": {
+            "end_date": "2022-04-21",
+            "prediction": 40503.65,
+            "signal": "DOWN",
+            "prev_close": 41502.75,
+            "prev_date": "2022-04-19"
+        }
+    },
+    "model_exp3": {
+        "2022-04-21": {
+            "end_date": "2022-04-21",
+            "prediction": 41122.33,
+            "signal": "DOWN",
+            "prev_close": 41502.75,
+            "prev_date": "2022-04-19"
+        }
+    }
+}
