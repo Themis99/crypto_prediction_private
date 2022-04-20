@@ -13,6 +13,8 @@ def create_directory_if_not_exists(directory_path):
 
 # Export the data to json File
 def export_data(is_fake_data, model, prediction, prev_close, signal, prev_date, end_date):
+    print('Starting export data')
+
     directory_path = './fake_data' if is_fake_data == True else './real_data'
     create_directory_if_not_exists(directory_path)
 
@@ -39,7 +41,7 @@ def export_data(is_fake_data, model, prediction, prev_close, signal, prev_date, 
         json_data[model] = {}
 
     json_data[model][end_date] = {'end_date': end_date, 'prediction': prediction, 'signal': signal,
-                                  'prev_close': prev_close, 'prev_date': prev_date, }
+                                  'prev_close': prev_close, 'prev_date': prev_date}
 
     # Write the json file
     with open(json_file_path, 'r+') as outfile:
