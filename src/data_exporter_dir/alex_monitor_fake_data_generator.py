@@ -19,7 +19,7 @@ def generate_mock_data(model):
         prev_date = str((random_number - 1)) + '-05-2022'
         end_date = str(random_number) + '-05-2022'
 
-        time.sleep(0.25)
+        time.sleep(0.35)
         data_exporter_library.export_data(True, model, prediction, prev_close, signal, prev_date, end_date)
 
 
