@@ -1,29 +1,59 @@
 {
     "model_1": {
-        "2022-04-21": {
-            "end_date": "2022-04-21",
+        "2022-04-20": {
+            "end_date": "2022-04-20",
             "prediction": 40572.73,
             "signal": "DOWN",
             "prev_close": 41502.75,
             "prev_date": "2022-04-19"
+        },
+        "2022-04-21": {
+            "end_date": "2022-04-21",
+            "prediction": 40791.72,
+            "signal": "DOWN",
+            "prev_close": 41374.38,
+            "prev_date": "2022-04-20"
         }
     },
     "model_2": {
-        "2022-04-21": {
-            "end_date": "2022-04-21",
+        "2022-04-20": {
+            "end_date": "2022-04-20",
             "prediction": 40503.65,
             "signal": "DOWN",
             "prev_close": 41502.75,
             "prev_date": "2022-04-19"
+        },
+        "2022-04-21": {
+            "end_date": "2022-04-21",
+            "prediction": 40250.09,
+            "signal": "DOWN",
+            "prev_close": 41374.38,
+            "prev_date": "2022-04-20"
         }
     },
     "model_3": {
-        "2022-04-21": {
-            "end_date": "2022-04-21",
+        "2022-04-20": {
+            "end_date": "2022-04-20",
             "prediction": 41122.33,
             "signal": "DOWN",
             "prev_close": 41502.75,
             "prev_date": "2022-04-19"
+        },
+        "2022-04-21": {
+            "end_date": "2022-04-21",
+            "prediction": 41596.89,
+            "signal": "UP",
+            "prev_close": 41374.38,
+            "prev_date": "2022-04-20"
+        }
+    },
+    "model_4": {
+        "2022-04-21": {
+            "end_date": "2022-04-21",
+            "prediction": 41450.25,
+            "signal": "UP",
+            "prev_close": 41374.38,
+            "prev_date": "2022-04-20"
         }
     }
 }
