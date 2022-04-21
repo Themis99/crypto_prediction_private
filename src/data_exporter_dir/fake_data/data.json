@@ -1,176 +1,176 @@
 {
     "model_exp1": {
-        "16-05-2022": {
-            "end_date": "16-05-2022",
-            "prediction": "43375",
-            "signal": "UP",
-            "prev_close": "42172",
-            "prev_date": "15-05-2022"
-        },
-        "8-05-2022": {
-            "end_date": "8-05-2022",
-            "prediction": "40971",
+        "21-05-2022": {
+            "end_date": "21-05-2022",
+            "prediction": "43247",
             "signal": "DOWN",
-            "prev_close": "41485",
-            "prev_date": "7-05-2022"
+            "prev_close": "44546",
+            "prev_date": "20-05-2022"
         },
-        "26-05-2022": {
-            "end_date": "26-05-2022",
-            "prediction": "36020",
-            "signal": "DOWN",
-            "prev_close": "37324",
-            "prev_date": "25-05-2022"
-        },
-        "3-05-2022": {
-            "end_date": "3-05-2022",
-            "prediction": "36976",
-            "signal": "DOWN",
-            "prev_close": "38114",
-            "prev_date": "2-05-2022"
-        },
-        "15-05-2022": {
-            "end_date": "15-05-2022",
-            "prediction": "39365",
+        "12-05-2022": {
+            "end_date": "12-05-2022",
+            "prediction": "43941",
             "signal": "UP",
-            "prev_close": "38680",
-            "prev_date": "14-05-2022"
+            "prev_close": "42857",
+            "prev_date": "11-05-2022"
         },
-        "14-05-2022": {
-            "end_date": "14-05-2022",
-            "prediction": "41531",
-            "signal": "UP",
-            "prev_close": "40807",
-            "prev_date": "13-05-2022"
-        },
-        "13-05-2022": {
-            "end_date": "13-05-2022",
-            "prediction": "41291",
+        "11-05-2022": {
+            "end_date": "11-05-2022",
+            "prediction": "42434",
             "signal": "DOWN",
-            "prev_close": "42033",
-            "prev_date": "12-05-2022"
-        },
-        "6-05-2022": {
-            "end_date": "6-05-2022",
-            "prediction": "35682",
-            "signal": "UP",
-            "prev_close": "34504",
-            "prev_date": "5-05-2022"
-        }
-    },
-    "model_exp2": {
-        "16-05-2022": {
-            "end_date": "16-05-2022",
-            "prediction": "33899",
-            "signal": "DOWN",
-            "prev_close": "35357",
-            "prev_date": "15-05-2022"
-        },
-        "22-05-2022": {
-            "end_date": "22-05-2022",
-            "prediction": "43006",
-            "signal": "DOWN",
-            "prev_close": "43946",
-            "prev_date": "21-05-2022"
-        },
-        "17-05-2022": {
-            "end_date": "17-05-2022",
-            "prediction": "35228",
-            "signal": "UP",
-            "prev_close": "34267",
-            "prev_date": "16-05-2022"
-        },
-        "18-05-2022": {
-            "end_date": "18-05-2022",
-            "prediction": "38223",
-            "signal": "DOWN",
-            "prev_close": "38937",
-            "prev_date": "17-05-2022"
-        },
-        "30-05-2022": {
-            "end_date": "30-05-2022",
-            "prediction": "44096",
-            "signal": "UP",
-            "prev_close": "43465",
-            "prev_date": "29-05-2022"
-        },
-        "3-05-2022": {
-            "end_date": "3-05-2022",
-            "prediction": "35103",
-            "signal": "DOWN",
-            "prev_close": "36012",
-            "prev_date": "2-05-2022"
-        },
-        "6-05-2022": {
-            "end_date": "6-05-2022",
-            "prediction": "41559",
-            "signal": "UP",
-            "prev_close": "40573",
-            "prev_date": "5-05-2022"
-        },
-        "25-05-2022": {
-            "end_date": "25-05-2022",
-            "prediction": "41101",
-            "signal": "UP",
-            "prev_close": "40327",
-            "prev_date": "24-05-2022"
-        }
-    },
-    "model_exp3": {
-        "1-05-2022": {
-            "end_date": "1-05-2022",
-            "prediction": "40371",
-            "signal": "DOWN",
-            "prev_close": "41861",
-            "prev_date": "0-05-2022"
-        },
-        "24-05-2022": {
-            "end_date": "24-05-2022",
-            "prediction": "39714",
-            "signal": "UP",
-            "prev_close": "38523",
-            "prev_date": "23-05-2022"
+            "prev_close": "43864",
+            "prev_date": "10-05-2022"
         },
         "5-05-2022": {
             "end_date": "5-05-2022",
-            "prediction": "34657",
-            "signal": "DOWN",
-            "prev_close": "35430",
+            "prediction": "38712",
+            "signal": "UP",
+            "prev_close": "37925",
             "prev_date": "4-05-2022"
+        },
+        "4-05-2022": {
+            "end_date": "4-05-2022",
+            "prediction": "36290",
+            "signal": "DOWN",
+            "prev_close": "37271",
+            "prev_date": "3-05-2022"
+        },
+        "27-05-2022": {
+            "end_date": "27-05-2022",
+            "prediction": "43390",
+            "signal": "UP",
+            "prev_close": "41957",
+            "prev_date": "26-05-2022"
+        },
+        "18-05-2022": {
+            "end_date": "18-05-2022",
+            "prediction": "43457",
+            "signal": "DOWN",
+            "prev_close": "44578",
+            "prev_date": "17-05-2022"
+        },
+        "28-05-2022": {
+            "end_date": "28-05-2022",
+            "prediction": "44049",
+            "signal": "UP",
+            "prev_close": "42534",
+            "prev_date": "27-05-2022"
+        },
+        "25-05-2022": {
+            "end_date": "25-05-2022",
+            "prediction": "40820",
+            "signal": "UP",
+            "prev_close": "39849",
+            "prev_date": "24-05-2022"
+        }
+    },
+    "model_exp2": {
+        "21-05-2022": {
+            "end_date": "21-05-2022",
+            "prediction": "38388",
+            "signal": "DOWN",
+            "prev_close": "39653",
+            "prev_date": "20-05-2022"
+        },
+        "23-05-2022": {
+            "end_date": "23-05-2022",
+            "prediction": "41565",
+            "signal": "DOWN",
+            "prev_close": "42735",
+            "prev_date": "22-05-2022"
+        },
+        "8-05-2022": {
+            "end_date": "8-05-2022",
+            "prediction": "42644",
+            "signal": "DOWN",
+            "prev_close": "43861",
+            "prev_date": "7-05-2022"
+        },
+        "30-05-2022": {
+            "end_date": "30-05-2022",
+            "prediction": "37015",
+            "signal": "DOWN",
+            "prev_close": "38103",
+            "prev_date": "29-05-2022"
+        },
+        "26-05-2022": {
+            "end_date": "26-05-2022",
+            "prediction": "37267",
+            "signal": "DOWN",
+            "prev_close": "38093",
+            "prev_date": "25-05-2022"
+        },
+        "19-05-2022": {
+            "end_date": "19-05-2022",
+            "prediction": "39056",
+            "signal": "DOWN",
+            "prev_close": "39992",
+            "prev_date": "18-05-2022"
+        },
+        "28-05-2022": {
+            "end_date": "28-05-2022",
+            "prediction": "38064",
+            "signal": "DOWN",
+            "prev_close": "39585",
+            "prev_date": "27-05-2022"
+        },
+        "10-05-2022": {
+            "end_date": "10-05-2022",
+            "prediction": "36315",
+            "signal": "DOWN",
+            "prev_close": "37187",
+            "prev_date": "9-05-2022"
+        }
+    },
+    "model_exp3": {
+        "17-05-2022": {
+            "end_date": "17-05-2022",
+            "prediction": "41706",
+            "signal": "DOWN",
+            "prev_close": "43070",
+            "prev_date": "16-05-2022"
         },
         "13-05-2022": {
             "end_date": "13-05-2022",
-            "prediction": "39331",
-            "signal": "DOWN",
-            "prev_close": "40053",
+            "prediction": "43976",
+            "signal": "UP",
+            "prev_close": "42403",
             "prev_date": "12-05-2022"
         },
-        "6-05-2022": {
-            "end_date": "6-05-2022",
-            "prediction": "37335",
+        "14-05-2022": {
+            "end_date": "14-05-2022",
+            "prediction": "36341",
             "signal": "UP",
-            "prev_close": "36362",
-            "prev_date": "5-05-2022"
+            "prev_close": "35706",
+            "prev_date": "13-05-2022"
         },
-        "22-05-2022": {
-            "end_date": "22-05-2022",
-            "prediction": "40657",
+        "26-05-2022": {
+            "end_date": "26-05-2022",
+            "prediction": "34660",
+            "signal": "DOWN",
+            "prev_close": "35955",
+            "prev_date": "25-05-2022"
+        },
+        "5-05-2022": {
+            "end_date": "5-05-2022",
+            "prediction": "38535",
+            "signal": "DOWN",
+            "prev_close": "39292",
+            "prev_date": "4-05-2022"
+        },
+        "10-05-2022": {
+            "end_date": "10-05-2022",
+            "prediction": "35669",
             "signal": "UP",
-            "prev_close": "39257",
-            "prev_date": "21-05-2022"
+            "prev_close": "34774",
+            "prev_date": "9-05-2022"
         },
-        "15-05-2022": {
-            "end_date": "15-05-2022",
-            "prediction": "43124",
-            "signal": "DOWN",
-            "prev_close": "44149",
-            "prev_date": "14-05-2022"
-        },
-        "17-05-2022": {
-            "end_date": "17-05-2022",
-            "prediction": "41730",
-            "signal": "DOWN",
-            "prev_close": "42826",
-            "prev_date": "16-05-2022"
+        "29-05-2022": {
+            "end_date": "29-05-2022",
+            "prediction": "36248",
+            "signal": "UP",
+            "prev_close": "34742",
+            "prev_date": "28-05-2022"
         }
     }
 }
