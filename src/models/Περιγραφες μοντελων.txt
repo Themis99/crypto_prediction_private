@@ -1,0 +1,4 @@
+Μοντελο 1: εγινε fine tuning σε train set και βασει των καλυτεων παραμετρων εγινε re train σε ολο το dataset για n+30 epochs. LAG = 58
+Μοντελο 2: Εγινε fine tuning σε train set και βασει των καλυτεων παραμετρων εγινε re train σε ολο το dataset για n+100 epochs. LAG =58
+Μοντελο 3: Εγινε train σε ολο το datset χωρις train test split και χωρις fine tuning LAG = 48
+Μοντελο 4: Εγινε train σε ολο το datset χωρις train test split με fine tuning LAG = 48
