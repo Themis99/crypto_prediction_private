@@ -13,6 +13,14 @@
             "signal": "DOWN",
             "prev_close": 41374.38,
             "prev_date": "2022-04-20"
+        },
+        "2022-04-23": {
+            "end_date": "2022-04-23",
+            "prediction": 40628.7,
+            "signal": "UP",
+            "prev_close": 40527.36,
+            "prev_date": "2022-04-21",
+            "win_loss": 5
         }
     },
     "model_2": {
@@ -29,6 +37,14 @@
             "signal": "DOWN",
             "prev_close": 41374.38,
             "prev_date": "2022-04-20"
+        },
+        "2022-04-23": {
+            "end_date": "2022-04-23",
+            "prediction": 40353.91,
+            "signal": "DOWN",
+            "prev_close": 40527.36,
+            "prev_date": "2022-04-21",
+            "win_loss": 5
         }
     },
     "model_3": {
@@ -45,6 +61,14 @@
             "signal": "UP",
             "prev_close": 41374.38,
             "prev_date": "2022-04-20"
+        },
+        "2022-04-23": {
+            "end_date": "2022-04-23",
+            "prediction": 41019.67,
+            "signal": "UP",
+            "prev_close": 40527.36,
+            "prev_date": "2022-04-21",
+            "win_loss": 5
         }
     },
     "model_4": {
@@ -54,6 +78,14 @@
             "signal": "UP",
             "prev_close": 41374.38,
             "prev_date": "2022-04-20"
+        },
+        "2022-04-23": {
+            "end_date": "2022-04-23",
+            "prediction": 40869.03,
+            "signal": "UP",
+            "prev_close": 40527.36,
+            "prev_date": "2022-04-21",
+            "win_loss": 5
         }
     }
 }

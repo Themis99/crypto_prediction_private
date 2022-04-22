@@ -64,7 +64,7 @@ def predict(model):
              ' \n\nBTC closing price : [ ' + str(prev_close) + ' $ ] ' \
              ' For Date : [ ' + prev_date + ' ] 4 am Greek Time'
 
-    # print(message)
+    print(message)
 
     # "end_date": "2022-04-20",
     # "prediction": 40572.73,
@@ -72,10 +72,10 @@ def predict(model):
     # "prev_close": 41502.75,
     # "prev_date": "2022-04-19"
 
-    previous_prediction = 40572.73
-    previous_signal = 'DOWN'
-    win_loss = winloss(previous_prediction, previous_signal)
-    print(winloss)
+    # previous_prediction = 40572.73
+    # previous_signal = 'DOWN'
+    # win_loss = winloss(previous_prediction, previous_signal)
+    # print(winloss)
 
     # ------------------------------ THE BELOW CODE IS FOR THE TELEGRAM BOT ------------------------------
     # Get Chat id for our bot with apikey = 5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To
@@ -90,12 +90,13 @@ def predict(model):
     # -------------------- THE BELOW CODE IS FOR EXPORTING THE DATA TO JSON FILE -------------------------
 
     # Export data to json file for each unique day we run this program
-    data_exporter_library.export_data(False, model, prediction, prev_close, signal, prev_date, end_date, win_loss)
+    data_exporter_library.export_data(False, model, prediction, prev_close, signal, prev_date, end_date, 5)
 
 if __name__ == "__main__":
     predict('model_1')
-    time.sleep(0.35)
-    # predict('model_2')
-    time.sleep(0.35)
-    # predict('model_3')
-    # predict('model_4')
+    time.sleep(0.6)
+    predict('model_2')
+    time.sleep(0.6)
+    predict('model_3')
+    time.sleep(0.6)
+    predict('model_4')
