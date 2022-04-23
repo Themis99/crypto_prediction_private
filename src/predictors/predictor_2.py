@@ -1,5 +1,3 @@
-from datetime import date
-
 import tensorflow as tf
 from tensorflow import keras
 
@@ -17,6 +15,7 @@ class predictor_2:
 
         # retrieve data
         data = retrieve_data()
+        data = data[:-1]
         data = data.tail(self.LAG * 2 + 1)
         return data
 
@@ -41,8 +40,9 @@ class predictor_2:
         previous_date = str((prev_date.strftime("%Y-%m-%d")))
 
         # take prediction date
-        today = date.today()
-        End_date = str((today.strftime("%Y-%m-%d")))
+        data_alt = retrieve_data()
+        pred_date = data_alt.index[-1]
+        prediction_date = str((pred_date.strftime("%Y-%m-%d")))
 
         # no date
         data_init.reset_index(inplace=True)
@@ -71,7 +71,7 @@ class predictor_2:
 
         if predict > previous_close:
             signal = 'UP'
-            return signal, predict, End_date, previous_close, previous_date
+            return signal, predict, prediction_date, previous_close, previous_date
         elif predict < previous_close:
             signal = 'DOWN'
-            return signal, predict, End_date, previous_close, previous_date
+            return signal, predict, prediction_date, previous_close, previous_date

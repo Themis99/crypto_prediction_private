@@ -1,39 +1,13 @@
 import time
 import warnings
 
-from src import data_collector
 from src.data_exporter_dir import data_exporter_library
 from src.predictors.predictor_1 import predictor_1
 from src.predictors.predictor_2 import predictor_2
 from src.predictors.predictor_3 import predictor_3
 from src.predictors.predictor_4 import predictor_4
-import warnings
+
 warnings.filterwarnings("ignore")
-
-
-
-def winloss(previous_prediction, previous_signal):
-
-    # take data
-    data = data_collector.retrieve_data()
-
-    # take previous close
-    previous_close = round(data.tail(1)['Close'].item(), 2)
-
-    # προ-προ-χθεσινό close
-    previous_previous_close = round(data[:-1].tail(1)['Close'].item(), 2)
-
-    #  what signal really happened
-    real_signal = 'UP' if previous_previous_close < previous_close else 'DOWN'
-
-    # Compare the two signals WIN if signals are the same or else loss
-    trade = 'WIN' if real_signal == previous_signal else 'LOSS'
-
-    # If trade is win take the difference from real close and the predicted close
-    out = abs(previous_close - previous_prediction) if real_signal == previous_signal else None
-
-    print('previous_close : [ ' + str(previous_close) + ' ] , previous_previous_close  : [ ' + str(previous_previous_close) + ' ] , previous_prediction : [ ' + str(previous_prediction) + ' ]')
-    return trade, out
 
 # Predict using the given model
 def predict(model):
@@ -90,7 +64,7 @@ def predict(model):
     # -------------------- THE BELOW CODE IS FOR EXPORTING THE DATA TO JSON FILE -------------------------
 
     # Export data to json file for each unique day we run this program
-    data_exporter_library.export_data(False, model, prediction, prev_close, signal, prev_date, end_date, 5)
+    data_exporter_library.export_data(False, model, prediction, prev_close, signal, prev_date, end_date)
 
 if __name__ == "__main__":
     predict('model_1')

@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow import keras
-from datetime import date
+
 from src.data_collector import retrieve_data
 from src.rolling import rolling_zscore
 
@@ -15,6 +15,7 @@ class predictor_4:
 
         #retrieve data
         data = retrieve_data()
+        data = data[:-1]
         data = data.tail(self.LAG*2)
         return data
 
@@ -39,8 +40,9 @@ class predictor_4:
         previous_date = str((prev_date.strftime("%Y-%m-%d")))
 
         #take prediction date
-        today = date.today()
-        End_date = str((today.strftime("%Y-%m-%d")))
+        data_alt = retrieve_data()
+        pred_date = data_alt.index[-1]
+        prediction_date = str((pred_date.strftime("%Y-%m-%d")))
 
         #no date
         data_init.reset_index(inplace=True)
@@ -71,10 +73,10 @@ class predictor_4:
 
         if predict > previous_close:
             signal = 'UP'
-            return signal, predict, End_date, previous_close,previous_date
+            return signal, predict, prediction_date, previous_close,previous_date
         elif predict < previous_close:
             signal = 'DOWN'
-            return signal, predict, End_date, previous_close, previous_date
+            return signal, predict, prediction_date, previous_close, previous_date
 
 
 
