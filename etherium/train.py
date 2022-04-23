@@ -1,18 +1,19 @@
-from tcn import TCN, tcn_full_summary
+import os
+import pickle
+import time
+
+import keras_tuner as kt
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 import tensorflow as tf
+from tcn import TCN
 from tensorflow import keras
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
-import keras_tuner as kt
-from rolling import rolling_zscore
-import os
+
 import data_collector
-import time
-import pickle
+from rolling import rolling_zscore
 
 # required for solving issue with cuDNN
 os.environ["CUDA_VISIBLE_DEVICES"]="-1"
