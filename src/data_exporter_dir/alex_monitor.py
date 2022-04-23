@@ -30,7 +30,8 @@ def predict(model):
 
     signal, prediction, end_date, prev_close, prev_date = pred.predict(PATH=path)  # predict
 
-    signal_string = '⬆️' if signal == 'UP' else '⬇️'
+    # '⬆️' if signal == 'UP' else '⬇️'
+    signal_string = signal
     message = 'Using model : [ ' + model + ' ]'\
              ' \n\nBTC closing price : [ ' + str(prediction) + ' $ ] '\
              ' For Date : [ ' + end_date + ' ] 4 am Greek Time '\
