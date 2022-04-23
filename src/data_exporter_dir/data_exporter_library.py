@@ -89,7 +89,8 @@ def export_data(is_fake_data, model, prediction, prev_close, signal, prev_date, 
             'prev_close': data['prev_close'],
             'prev_date': data['prev_date'],
             'win': win,
-            'out': out
+            'out': out,
+            'actual_price': prev_close
         }
 
     json_data[model][end_date] = {
