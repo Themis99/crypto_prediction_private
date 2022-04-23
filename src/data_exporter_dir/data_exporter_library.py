@@ -77,24 +77,24 @@ def export_data(is_fake_data, model, prediction, prev_close, signal, prev_date, 
     # Calculate win loss if previous_prediction exists
     # print(datetime.utcnow().strftime("%Y-%m-%d"))
 
-    previous_prediction = json_data[model][prev_date]['prediction']
-    previous_signal = json_data[model][prev_date]['signal']
-    win = ''
-    out = ''
-
-    if previous_prediction:
-        print('Previous_prediction_2', previous_prediction)
-        win, out = winloss(previous_prediction, previous_signal)
-        data = json_data[model][prev_date]
-        json_data[model][prev_date] = {
-            'end_date': data['end_date'],
-            'prediction': data['prediction'],
-            'signal': data['signal'],
-            'prev_close': data['prev_close'],
-            'prev_date': data['prev_date'],
-            'win': win,
-            'out': out
-        }
+    # previous_prediction = json_data[model][prev_date]['prediction']
+    # previous_signal = json_data[model][prev_date]['signal']
+    # win = ''
+    # out = ''
+    #
+    # if previous_prediction:
+    #     print('Previous_prediction_2', previous_prediction)
+    #     win, out = winloss(previous_prediction, previous_signal)
+    #     data = json_data[model][prev_date]
+    #     json_data[model][prev_date] = {
+    #         'end_date': data['end_date'],
+    #         'prediction': data['prediction'],
+    #         'signal': data['signal'],
+    #         'prev_close': data['prev_close'],
+    #         'prev_date': data['prev_date'],
+    #         'win': win,
+    #         'out': out
+    #     }
 
     json_data[model][end_date] = {
         'end_date': end_date,
