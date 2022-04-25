@@ -2,15 +2,15 @@ import os
 import pickle
 import time
 
-import keras_tuner as kt
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import tensorflow as tf
+from keras import Sequential
+from keras.layers import Dense
 from tcn import TCN
 from tensorflow import keras
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.models import Sequential
+import keras_tuner as kt
 
 import data_collector
 from rolling import rolling_zscore
@@ -144,7 +144,7 @@ if __name__ == "__main__":
         max_trials=30,
         executions_per_trial=2,
         overwrite=True,
-        directory="C:\\Users\\Themis\\Desktop\\TNC",
+        directory="C:\\Users\\alexa\\Desktop\\TNC",
         project_name="TCN_bitcoin"
     )
 
@@ -191,4 +191,4 @@ if __name__ == "__main__":
     with open('best_hp', 'wb') as config_dictionary_file:
         pickle.dump(best_hp, config_dictionary_file)
 
-    best_model.save('C:\\Users\\Themis\\Desktop\\Cuda_bitcoin_pred\\etherium\\model\\eth_model_1')
+    best_model.save('C:\\Users\\alexa\\Desktop\\Cuda_bitcoin_pred\\etherium\\model\\eth_model_1')

@@ -45,7 +45,17 @@
             "prediction": 39736.93,
             "signal": "UP",
             "prev_close": 39486.73,
-            "prev_date": "2022-04-23"
+            "prev_date": "2022-04-23",
+            "win": "LOSS",
+            "out": 267,
+            "actual_close": 39469.29
+        },
+        "2022-04-25": {
+            "end_date": "2022-04-25",
+            "prediction": 39248.47,
+            "signal": "DOWN",
+            "prev_close": 39469.29,
+            "prev_date": "2022-04-24"
         }
     },
     "model_2": {
@@ -84,7 +94,17 @@
             "prediction": 39510.41,
             "signal": "UP",
             "prev_close": 39486.73,
-            "prev_date": "2022-04-23"
+            "prev_date": "2022-04-23",
+            "win": "LOSS",
+            "out": 41,
+            "actual_close": 39469.29
+        },
+        "2022-04-25": {
+            "end_date": "2022-04-25",
+            "prediction": 39392.97,
+            "signal": "DOWN",
+            "prev_close": 39469.29,
+            "prev_date": "2022-04-24"
         }
     },
     "model_3": {
@@ -123,7 +143,17 @@
             "prediction": 39847.03,
             "signal": "UP",
             "prev_close": 39486.73,
-            "prev_date": "2022-04-23"
+            "prev_date": "2022-04-23",
+            "win": "LOSS",
+            "out": 377,
+            "actual_close": 39469.29
+        },
+        "2022-04-25": {
+            "end_date": "2022-04-25",
+            "prediction": 40044.63,
+            "signal": "UP",
+            "prev_close": 39469.29,
+            "prev_date": "2022-04-24"
         }
     },
     "model_4": {
@@ -152,7 +182,17 @@
             "prediction": 38916.27,
             "signal": "DOWN",
             "prev_close": 39486.73,
-            "prev_date": "2022-04-23"
+            "prev_date": "2022-04-23",
+            "win": "WIN",
+            "out": 553,
+            "actual_close": 39469.29
+        },
+        "2022-04-25": {
+            "end_date": "2022-04-25",
+            "prediction": 39396.2,
+            "signal": "DOWN",
+            "prev_close": 39469.29,
+            "prev_date": "2022-04-24"
         }
     }
 }
