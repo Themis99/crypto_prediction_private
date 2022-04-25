@@ -141,11 +141,11 @@ if __name__ == "__main__":
     tuner = kt.BayesianOptimization(
         hypermodel=build_model,
         objective=kt.Objective("val_mean_absolute_percentage_error", direction="min"),
-        max_trials=30,
+        max_trials=1,
         executions_per_trial=2,
         overwrite=True,
         directory="C:\\Users\\alexa\\Desktop\\TNC",
-        project_name="TCN_bitcoin"
+        project_name="TCN_etherium"
     )
 
     stop_early = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=35)
@@ -191,4 +191,4 @@ if __name__ == "__main__":
     with open('best_hp', 'wb') as config_dictionary_file:
         pickle.dump(best_hp, config_dictionary_file)
 
-    best_model.save('C:\\Users\\alexa\\Desktop\\Cuda_bitcoin_pred\\etherium\\model\\eth_model_1')
+    best_model.save('C:\\Users\\alexa\\Desktop\\etherium\\model\\eth_model_1')
