@@ -10,23 +10,25 @@ from src.predictors.predictor_4 import predictor_4
 warnings.filterwarnings("ignore")
 
 # Predict using the given model
-def predict(model):
+def predict(modelPath, model):
     #  LAG = days to look back
 
     # model path
-    path = '../models/' + model
+    path = modelPath + model
 
     # object predictor
     pred = ''
 
-    if (model == 'model_1'):
+    if (model == 'btc_model_1'):
         pred = predictor_1(LAG=58)
-    elif (model == 'model_2'):
+    elif (model == 'btc_model_2'):
         pred = predictor_2(LAG=58)
-    elif (model == 'model_3'):
+    elif (model == 'btc_model_3'):
         pred = predictor_3(LAG=48)
-    elif (model == 'model_4'):
+    elif (model == 'btc_model_4'):
         pred = predictor_4(LAG=48)
+    elif (model == 'eth_model_1'):
+        pred = predictor_4(LAG=48) # todo add ethereum predictor here
 
     signal, prediction, end_date, prev_close, prev_date = pred.predict(PATH=path)  # predict
 
@@ -65,13 +67,20 @@ def predict(model):
     # -------------------- THE BELOW CODE IS FOR EXPORTING THE DATA TO JSON FILE -------------------------
 
     # Export data to json file for each unique day we run this program
-    data_exporter_library.export_data(False, model, prediction, prev_close, signal, prev_date, end_date)
+    # data_exporter_library.export_data(False, model, prediction, prev_close, signal, prev_date, end_date)
 
 if __name__ == "__main__":
-    predict('model_1')
-    time.sleep(0.6)
-    predict('model_2')
-    time.sleep(0.6)
-    predict('model_3')
-    time.sleep(0.6)
-    predict('model_4')
+    btc_model_path = '../models/bitcoin/'
+    ethereum_model_path = '../models/ethereum/'
+
+    predict(btc_model_path, 'btc_model_1')
+    # time.sleep(0.6)
+    # predict(btc_model_path, 'btc_model_2')
+    # time.sleep(0.6)
+    # predict(btc_model_path, 'btc_model_3')
+    # time.sleep(0.6)
+    # predict(btc_model_path, 'btc_model_4')
+    # time.sleep(0.6)
+
+    # predict(ethereum_model_path, 'eth_model_1')
+

@@ -19,7 +19,7 @@ def winloss(prev_pred, previous_signal):
 
 if __name__ == "__main__":
     LAG = 58 # days to look back
-    PATH = 'C:\\Users\\Themis\\Desktop\\Cuda_bitcoin_pred\\models\\model_2' # model path ( in case you want to use relative path => ./models/model_1 )
+    PATH = 'C:\\Users\\Themis\\Desktop\\Cuda_bitcoin_pred\\models\\btc_model_2' # model path ( in case you want to use relative path => ./models/btc_model_1 )
     pred = predictor_2(LAG = 58) #object predictor
     signal, prediction, end_date, prev_close, prev_date = pred.predict(PATH=PATH) #predict
 

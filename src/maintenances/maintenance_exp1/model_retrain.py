@@ -203,5 +203,5 @@ if __name__ == "__main__":
     plt.show()
 
     #save model
-    final_model.save('C:\\Users\\Themis\\Desktop\\Cuda_bitcoin_pred\\models\\model_1')
+    final_model.save('C:\\Users\\Themis\\Desktop\\Cuda_bitcoin_pred\\models\\btc_model_1')
 

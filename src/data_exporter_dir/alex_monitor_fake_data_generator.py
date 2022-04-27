@@ -29,6 +29,6 @@ if __name__ == "__main__":
     if path.exists(file_path):
         os.remove(file_path)
 
-    generate_mock_data('model_1')
-    generate_mock_data('model_2')
-    generate_mock_data('model_3')
+    generate_mock_data('btc_model_1')
+    generate_mock_data('btc_model_2')
+    generate_mock_data('btc_model_3')

@@ -141,7 +141,7 @@ if __name__ == "__main__":
     tuner = kt.BayesianOptimization(
         hypermodel=build_model,
         objective=kt.Objective("val_mean_absolute_percentage_error", direction="min"),
-        max_trials=1,
+        max_trials=30,
         executions_per_trial=2,
         overwrite=True,
         directory="C:\\Users\\alexa\\Desktop\\TNC",
