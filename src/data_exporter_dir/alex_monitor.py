@@ -73,7 +73,7 @@ if __name__ == "__main__":
     btc_model_path = '../models/bitcoin/'
     ethereum_model_path = '../models/ethereum/'
 
-    predict(btc_model_path, 'btc_model_1')
+    # predict(btc_model_path, 'btc_model_1')
     # time.sleep(0.6)
     # predict(btc_model_path, 'btc_model_2')
     # time.sleep(0.6)
@@ -82,5 +82,5 @@ if __name__ == "__main__":
     # predict(btc_model_path, 'btc_model_4')
     # time.sleep(0.6)
 
-    # predict(ethereum_model_path, 'eth_model_1')
+    predict(ethereum_model_path, 'eth_model_1')
 
