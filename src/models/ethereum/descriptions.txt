@@ -1,0 +1,2 @@
+Το πρωτο μοντελο ειναι fine tuned στο train set μονο
+το δευτερο μοντελο ειναι fine tuned στο train set και re-trained στο σε ολο το dataset του etherium
