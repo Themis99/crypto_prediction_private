@@ -1,13 +1,14 @@
-import eth_data_collector
-from eth_rolling import rolling_zscore
 from tcn import TCN, tcn_full_summary
 import tensorflow as tf
 from tensorflow import keras
 from datetime import date
 
+from src import eth_data_collector
+from src.eth_rolling import eth_rolling_zscore
+
 tf.random.set_seed(42)
 
-class predictor:
+class eth_predictor_1:
     def __init__(self,LAG):
         self.LAG = LAG
 
@@ -15,7 +16,7 @@ class predictor:
     def take_data(self):
 
         #retrieve data
-        data = data_collector.yahoo_retriever()
+        data = eth_data_collector.yahoo_retriever()
         data = data[:-1]
         data = data.tail(self.LAG*2)
         return data
@@ -25,7 +26,7 @@ class predictor:
         #preprocess data
         data = self.take_data()
         # rolling z-score
-        roll_z = rolling_zscore(window=self.LAG)
+        roll_z = eth_rolling_zscore(window=self.LAG)
         data_scaled = roll_z.fit(data)
         data_scaled = data_scaled.tail(self.LAG)
 
@@ -42,7 +43,7 @@ class predictor:
 
         ################# edw exoume 8ema ###############
         #take prediction date
-        data_alt = data_collector.yahoo_retriever()
+        data_alt = eth_data_collector.yahoo_retriever()
         pred_date = data_alt.index[-1]
         prediction_date = str((pred_date.strftime("%Y-%m-%d")))
         #######################################

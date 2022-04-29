@@ -2,6 +2,7 @@ import time
 import warnings
 
 from src.data_exporter_dir import data_exporter_library
+from src.predictors.eth_predictor import eth_predictor_1
 from src.predictors.predictor_1 import predictor_1
 from src.predictors.predictor_2 import predictor_2
 from src.predictors.predictor_3 import predictor_3
@@ -10,7 +11,7 @@ from src.predictors.predictor_4 import predictor_4
 warnings.filterwarnings("ignore")
 
 # Predict using the given model
-def predict(modelPath, model):
+def predict(modelPath, model,export_file_name):
     #  LAG = days to look back
 
     # model path
@@ -28,14 +29,16 @@ def predict(modelPath, model):
     elif (model == 'btc_model_4'):
         pred = predictor_4(LAG=48)
     elif (model == 'eth_model_1'):
-        pred = predictor_4(LAG=48) # todo add ethereum predictor here
+        pred = eth_predictor_1(LAG=86)
+    elif (model == 'eth_model_2'):
+        pred = eth_predictor_1(LAG=86)
 
     signal, prediction, end_date, prev_close, prev_date = pred.predict(PATH=path)  # predict
 
     # '⬆️' if signal == 'UP' else '⬇️'
     signal_string = signal
     message = 'Using model : [ ' + model + ' ]'\
-             ' \n\nBTC closing price : [ ' + str(prediction) + ' $ ] '\
+             ' \n\nBTC prediction price : [ ' + str(prediction) + ' $ ] '\
              ' For Date : [ ' + end_date + ' ] 4 am Greek Time '\
              ' \n\nDirection : ' + signal_string + \
              ' \n\nBTC closing price : [ ' + str(prev_close) + ' $ ] ' \
@@ -67,20 +70,23 @@ def predict(modelPath, model):
     # -------------------- THE BELOW CODE IS FOR EXPORTING THE DATA TO JSON FILE -------------------------
 
     # Export data to json file for each unique day we run this program
-    # data_exporter_library.export_data(False, model, prediction, prev_close, signal, prev_date, end_date)
+    data_exporter_library.export_data(export_file_name, False, model, prediction, prev_close, signal, prev_date, end_date)
 
 if __name__ == "__main__":
     btc_model_path = '../models/bitcoin/'
+    btc_export_file_name = 'btc_data'
+
     ethereum_model_path = '../models/ethereum/'
+    ethereum_export_file_name = 'eth_data'
 
-    # predict(btc_model_path, 'btc_model_1')
-    # time.sleep(0.6)
-    # predict(btc_model_path, 'btc_model_2')
-    # time.sleep(0.6)
-    # predict(btc_model_path, 'btc_model_3')
-    # time.sleep(0.6)
-    # predict(btc_model_path, 'btc_model_4')
-    # time.sleep(0.6)
-
-    predict(ethereum_model_path, 'eth_model_1')
-
+    predict(btc_model_path, 'btc_model_1', btc_export_file_name)
+    time.sleep(0.6)
+    predict(btc_model_path, 'btc_model_2', btc_export_file_name)
+    time.sleep(0.6)
+    predict(btc_model_path, 'btc_model_3', btc_export_file_name)
+    time.sleep(0.6)
+    predict(btc_model_path, 'btc_model_4', btc_export_file_name)
+    time.sleep(0.6)
+    predict(ethereum_model_path, 'eth_model_1', ethereum_export_file_name)
+    time.sleep(0.6)
+    predict(ethereum_model_path, 'eth_model_2', ethereum_export_file_name)

@@ -3,6 +3,7 @@ from tensorflow import keras
 
 from src.data_collector import retrieve_data
 from src.rolling import rolling_zscore
+import pandas_ta as ta
 
 tf.random.set_seed(42)
 
@@ -70,6 +71,9 @@ class predictor_3:
         previous_day = data_init.tail(1)
         previous_close = previous_day['Close'].item()
         previous_close = round(previous_close, 2)
+
+        close = self.take_data()['Close']
+        print(ta.rsi(close, 14).tail(1))
 
         if predict > previous_close:
             signal = 'UP'

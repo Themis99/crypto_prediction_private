@@ -1,5 +1,5 @@
 from eth_predictor import predictor
-import data_collector
+import eth_data_collector
 
 def winloss(prev_pred,prev_s):
 

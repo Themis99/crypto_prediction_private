@@ -166,7 +166,7 @@ if __name__ == "__main__":
 
 
     final_model = build_model(config_dictionary[0])
-    history = final_model.fit(x = sequences, y = targets, epochs=num_epochs+30)
+    history = final_model.fit(x = sequences, y = targets, epochs=num_epochs+300)
 
     #plot training history
     plot_training_only_history(history)

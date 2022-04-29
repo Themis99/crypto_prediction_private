@@ -25,7 +25,7 @@ def generate_mock_data(model):
 
 if __name__ == "__main__":
     # Delete fake data json if it exists
-    file_path = './fake_data/data.json'
+    file_path = './fake_data/btc_data.json'
     if path.exists(file_path):
         os.remove(file_path)
 

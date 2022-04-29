@@ -46,20 +46,20 @@ def create_directory_if_not_exists(directory_path):
 
 
 # Export the data to json File
-def export_data(is_fake_data, model, prediction, prev_close, signal, prev_date, end_date):
+def export_data(export_file_name, is_fake_data, model, prediction, prev_close, signal, prev_date, end_date):
     print_message('Starting export data')
 
     directory_path = './fake_data' if is_fake_data == True else './real_data'
     create_directory_if_not_exists(directory_path)
 
-    json_file_path = directory_path + '/data.json'
+    json_file_path = directory_path + '/' + export_file_name + '.json'
 
     print_message('Checking if file : [ ' + json_file_path + ' ] exists : ' + str(path.exists(json_file_path)))
     if not path.exists(json_file_path):
         print_message('Creating Json File')
 
         # Create the json file
-        with open(directory_path + '/data.json', "a") as outfile:
+        with open(directory_path + '/' + export_file_name + '.json', "a") as outfile:
             json.dump({}, outfile, indent=4)
 
     print_message('Opening Json File')
