@@ -133,4 +133,4 @@ if __name__ == "__main__":
 
     Feats = pd.DataFrame(final,columns= ['RMSE','MSE','MAE','MAPE'])
     Feats['LAGS'] = pd.Series(LAG_LIST)
-    Feats.to_csv('C:\\Users\\Themis\\Desktop\\Cuda_bitcoin_pred\\exp2\\day\\Lag_performance.csv')
+    Feats.to_csv('./Lag_performance.csv')
