@@ -10,6 +10,11 @@ from src.predictors.predictor_4 import predictor_4
 
 warnings.filterwarnings("ignore")
 
+# For the project to run smoothly these need to be installed by hand
+# pip install keras-tcn
+# pip install keras-tuner --upgrade
+# pip install pandas-ta
+
 # Predict using the given model
 def predict(modelPath, model,export_file_name):
     #  LAG = days to look back
