@@ -90,9 +90,9 @@ if __name__ == "__main__":
     ethereum_models_path = '../models/ethereum/'
     ethereum_export_file_name = 'eth_data'
 
-    back_testing = True
+    back_testing = False
 
-    if back_testing:
+    if not back_testing:
         predict(btc_models_path, 'btc_model_1', btc_export_file_name, None)
         time.sleep(0.6)
         predict(btc_models_path, 'btc_model_2', btc_export_file_name, None)
