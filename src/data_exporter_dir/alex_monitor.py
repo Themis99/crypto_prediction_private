@@ -90,22 +90,26 @@ if __name__ == "__main__":
     ethereum_models_path = '../models/ethereum/'
     ethereum_export_file_name = 'eth_data'
 
-    predict(btc_models_path, 'btc_model_1', btc_export_file_name, None)
-    time.sleep(0.6)
-    predict(btc_models_path, 'btc_model_2', btc_export_file_name, None)
-    time.sleep(0.6)
-    predict(btc_models_path, 'btc_model_3', btc_export_file_name, None)
-    time.sleep(0.6)
-    predict(btc_models_path, 'btc_model_4', btc_export_file_name, None)
-    time.sleep(0.6)
-    predict(ethereum_models_path, 'eth_model_1', ethereum_export_file_name, None)
-    time.sleep(0.6)
-    predict(ethereum_models_path, 'eth_model_2', ethereum_export_file_name, None)
-    time.sleep(0.6)
+    back_testing = True
 
-    #  the below is for backtesting our models
-    btc_data_past_dates = 'btc_data_past_dates'
-    eth_data_past_dates = 'eth_data_past_dates'
-    predict_for_past_days(btc_models_path, 'btc_model_2', btc_data_past_dates, 3)
-    time.sleep(0.6)
-    predict_for_past_days(ethereum_models_path, 'eth_model_1', eth_data_past_dates, 3)
+    if back_testing:
+        predict(btc_models_path, 'btc_model_1', btc_export_file_name, None)
+        time.sleep(0.6)
+        predict(btc_models_path, 'btc_model_2', btc_export_file_name, None)
+        time.sleep(0.6)
+        predict(btc_models_path, 'btc_model_3', btc_export_file_name, None)
+        time.sleep(0.6)
+        predict(btc_models_path, 'btc_model_4', btc_export_file_name, None)
+        time.sleep(0.6)
+        predict(ethereum_models_path, 'eth_model_1', ethereum_export_file_name, None)
+        time.sleep(0.6)
+        predict(ethereum_models_path, 'eth_model_2', ethereum_export_file_name, None)
+        time.sleep(0.6)
+
+    else:
+        #  the below is for backtesting our models
+        btc_data_past_dates = 'btc_data_past_dates'
+        eth_data_past_dates = 'eth_data_past_dates'
+        predict_for_past_days(btc_models_path, 'btc_model_2', btc_data_past_dates, 3)
+        time.sleep(0.6)
+        predict_for_past_days(ethereum_models_path, 'eth_model_1', eth_data_past_dates, 3)
