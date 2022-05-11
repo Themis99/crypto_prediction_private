@@ -1,8 +1,8 @@
 from tcn import TCN, tcn_full_summary
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.models import Sequential
+from keras.layers import Dense
+from keras.models import Sequential
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
