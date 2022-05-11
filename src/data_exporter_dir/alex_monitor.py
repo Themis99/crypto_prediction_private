@@ -107,9 +107,12 @@ if __name__ == "__main__":
         time.sleep(0.6)
 
     else:
-        #  the below is for backtesting our models
+        # How many days back to go on back testing
+        n_days = 3
+
         btc_data_past_dates = 'btc_data_past_dates'
         eth_data_past_dates = 'eth_data_past_dates'
-        predict_for_past_days(btc_models_path, 'btc_model_2', btc_data_past_dates, 3)
+
+        predict_for_past_days(btc_models_path, 'btc_model_2', btc_data_past_dates, n_days)
         time.sleep(0.6)
-        predict_for_past_days(ethereum_models_path, 'eth_model_1', eth_data_past_dates, 3)
+        predict_for_past_days(ethereum_models_path, 'eth_model_1', eth_data_past_dates, n_days)
