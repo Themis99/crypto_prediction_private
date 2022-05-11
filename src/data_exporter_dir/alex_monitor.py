@@ -70,32 +70,42 @@ def predict(modelPath, model, export_file_name, past):
                                       end_date, past)
 
 
-if __name__ == "__main__":
-    btc_model_path = '../models/bitcoin/'
-    btc_export_file_name = 'btc_data'
+# produce predictions for n last days
+# if you put for example n = 31 and it is 31 May it will
+# produce predictions from 1 May until 29 May
+def predict_for_past_days(model_path, model, export_file_name, n_days):
+    for PAST in range(0, n_days):
+        time.sleep(0.6)
 
-    ethereum_model_path = '../models/ethereum/'
-    ethereum_export_file_name = 'eth_data'
-
-    predict(btc_model_path, 'btc_model_1', btc_export_file_name, None)
-    time.sleep(0.6)
-    predict(btc_model_path, 'btc_model_2', btc_export_file_name, None)
-    time.sleep(0.6)
-    predict(btc_model_path, 'btc_model_3', btc_export_file_name, None)
-    time.sleep(0.6)
-    predict(btc_model_path, 'btc_model_4', btc_export_file_name, None)
-    time.sleep(0.6)
-    predict(ethereum_model_path, 'eth_model_1', ethereum_export_file_name, None)
-    time.sleep(0.6)
-    predict(ethereum_model_path, 'eth_model_2', ethereum_export_file_name, None)
-
-    btc_export_file_name_past_dates = 'btc_data_past_dates'
-
-    n = 61
-    for PAST in range(0, n):
-        if PAST >= n - 1:
+        if PAST >= n_days - 1:
             print('End of predictions')
         else:
-            predict(btc_model_path, 'btc_model_2', btc_export_file_name_past_dates, n - PAST)
+            predict(model_path, model, export_file_name, n_days - PAST)
 
-        time.sleep(0.6)
+
+if __name__ == "__main__":
+    btc_models_path = '../models/bitcoin/'
+    btc_export_file_name = 'btc_data'
+
+    ethereum_models_path = '../models/ethereum/'
+    ethereum_export_file_name = 'eth_data'
+
+    predict(btc_models_path, 'btc_model_1', btc_export_file_name, None)
+    time.sleep(0.6)
+    predict(btc_models_path, 'btc_model_2', btc_export_file_name, None)
+    time.sleep(0.6)
+    predict(btc_models_path, 'btc_model_3', btc_export_file_name, None)
+    time.sleep(0.6)
+    predict(btc_models_path, 'btc_model_4', btc_export_file_name, None)
+    time.sleep(0.6)
+    predict(ethereum_models_path, 'eth_model_1', ethereum_export_file_name, None)
+    time.sleep(0.6)
+    predict(ethereum_models_path, 'eth_model_2', ethereum_export_file_name, None)
+    time.sleep(0.6)
+
+    #  the below is for backtesting our models
+    btc_data_past_dates = 'btc_data_past_dates'
+    eth_data_past_dates = 'eth_data_past_dates'
+    predict_for_past_days(btc_models_path, 'btc_model_2', btc_data_past_dates, 3)
+    time.sleep(0.6)
+    predict_for_past_days(ethereum_models_path, 'eth_model_1', eth_data_past_dates, 3)
