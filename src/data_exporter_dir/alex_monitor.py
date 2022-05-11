@@ -52,17 +52,6 @@ def predict(modelPath, model, export_file_name, past):
 
     print(message)
 
-    # "end_date": "2022-04-20",
-    # "prediction": 40572.73,
-    # "signal": "DOWN",
-    # "prev_close": 41502.75,
-    # "prev_date": "2022-04-19"
-
-    # previous_prediction = 40572.73
-    # previous_signal = 'DOWN'
-    # win_loss = winloss(previous_prediction, previous_signal)
-    # print(winloss)
-
     # ------------------------------ THE BELOW CODE IS FOR THE TELEGRAM BOT ------------------------------
     # Get Chat id for our bot with apikey = 5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To
     # https://api.telegram.org/bot5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To/getUpdates
