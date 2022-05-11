@@ -8,14 +8,15 @@ tf.random.set_seed(42)
 
 
 class predictor_2:
-    def __init__(self, LAG):
+    def __init__(self, LAG, past):
         self.LAG = LAG
+        self.past = past
 
     def take_data(self):
 
         # retrieve data
         data = retrieve_data()
-        data = data[:-1]
+        data = data[:-self.past]
         data = data.tail(self.LAG * 2 + 1)
         return data
 
@@ -41,7 +42,10 @@ class predictor_2:
 
         # take prediction date
         data_alt = retrieve_data()
+        data_alt = data_alt[:-(self.past - 1)]
+        # print(data_alt)
         pred_date = data_alt.index[-1]
+        # print(pred_date)
         prediction_date = str((pred_date.strftime("%Y-%m-%d")))
 
         # no date
@@ -58,7 +62,7 @@ class predictor_2:
         predict = model.predict(data_preprocessed)
 
         # invert z-score
-        last = data_init.tail(self.LAG - 1)
+        last = data_init.tail(self.LAG)
         mean = last['Close'].mean()
         std = last['Close'].std()
         predict = predict[0][0] * std + mean

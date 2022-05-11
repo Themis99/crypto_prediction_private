@@ -7,9 +7,9 @@ from src import data_collector
 print_info = False  # True
 
 
-def winloss(previous_prediction, previous_signal):
+def winloss(previous_prediction, previous_signal, past):
     # take data
-    data = data_collector.retrieve_data2()
+    data = data_collector.retrieve_data2(past)
 
     # take previous close
     previous_close = round(data.tail(1)['Close'].item(), 2)
@@ -46,7 +46,7 @@ def create_directory_if_not_exists(directory_path):
 
 
 # Export the data to json File
-def export_data(export_file_name, is_fake_data, model, prediction, prev_close, signal, prev_date, end_date):
+def export_data(export_file_name, is_fake_data, model, prediction, prev_close, signal, prev_date, end_date, past):
     print_message('Starting export data')
 
     directory_path = './fake_data' if is_fake_data == True else './real_data'
@@ -80,7 +80,7 @@ def export_data(export_file_name, is_fake_data, model, prediction, prev_close, s
     if prev_date in json_data[model]:
         previous_prediction = json_data[model][prev_date]['prediction']
         previous_signal = json_data[model][prev_date]['signal']
-        win, out = winloss(previous_prediction, previous_signal)
+        win, out = winloss(previous_prediction, previous_signal, past)
         data = json_data[model][prev_date]
         json_data[model][prev_date] = {
             'end_date': data['end_date'],

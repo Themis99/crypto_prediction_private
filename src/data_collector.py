@@ -4,7 +4,7 @@ def retrieve_data():
     data = yfdata.yahoo_retriever()
     return data
 
-def retrieve_data2():
+def retrieve_data2(past):
     data = yfdata.yahoo_retriever()
-    data = data[:-1]
+    data = data[:-past]
     return data

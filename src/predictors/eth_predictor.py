@@ -62,7 +62,7 @@ class eth_predictor_1:
         predict = model.predict(data_preprocessed)
 
         # invert z-score
-        last = data_init.tail(self.LAG-1)
+        last = data_init.tail(self.LAG)
         mean = last['Close'].mean()
         std = last['Close'].std()
         predict = predict[0][0] * std + mean
