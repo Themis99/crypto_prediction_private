@@ -54,15 +54,15 @@ def predict(modelPath, model, export_file_name, past, print_to_console):
 
         print(message)
 
-    # ------------------------------ THE BELOW CODE IS FOR THE TELEGRAM BOT ------------------------------
-    # Get Chat id for our bot with apikey = 5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To
-    # https://api.telegram.org/bot5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To/getUpdates
-    # chat id = -1001720397362
+        # ------------------------------ THE BELOW CODE IS FOR THE TELEGRAM BOT ------------------------------
+        # Get Chat id for our bot with apikey = 5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To
+        # https://api.telegram.org/bot5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To/getUpdates
+        # chat id = -1001720397362
 
-    chat_id = '-1001720397362'
-    base_url = 'https://api.telegram.org/bot5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To/sendMessage?chat_id=' + chat_id + '&text=' + message
+        chat_id = '-1001720397362'
+        base_url = 'https://api.telegram.org/bot5145257581:AAFFag1OAu9fR5KE0YTHsY2303z8CF-o6To/sendMessage?chat_id=' + chat_id + '&text=' + message
 
-    # requests.get(base_url)
+        # requests.get(base_url)
 
     # -------------------- THE BELOW CODE IS FOR EXPORTING THE DATA TO JSON FILE -------------------------
 
