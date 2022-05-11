@@ -15,7 +15,9 @@ class predictor_1:
     def take_data(self):
 
         # retrieve data
+        # print(time())
         data = retrieve_data()
+        # print(time())
         if self.past is None:
             data = data[:-1]
         else:
