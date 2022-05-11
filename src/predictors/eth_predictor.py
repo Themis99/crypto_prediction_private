@@ -1,29 +1,32 @@
-from tcn import TCN, tcn_full_summary
 import tensorflow as tf
 from tensorflow import keras
-from datetime import date
 
 from src import eth_data_collector
 from src.eth_rolling import eth_rolling_zscore
 
 tf.random.set_seed(42)
 
-class eth_predictor_1:
-    def __init__(self,LAG):
-        self.LAG = LAG
 
+class eth_predictor_1:
+    def __init__(self, lag, past):
+        self.LAG = lag
+        self.past = past
 
     def take_data(self):
 
-        #retrieve data
+        # retrieve data
         data = eth_data_collector.yahoo_retriever()
-        data = data[:-1]
-        data = data.tail(self.LAG*2)
+        if self.past is None:
+            data = data[:-1]
+        else:
+            data = data[:-self.past]
+
+        data = data.tail(self.LAG * 2)
         return data
 
     def preprocess(self):
 
-        #preprocess data
+        # preprocess data
         data = self.take_data()
         # rolling z-score
         roll_z = eth_rolling_zscore(window=self.LAG)
@@ -32,30 +35,32 @@ class eth_predictor_1:
 
         return data_scaled
 
-    def predict(self,PATH):
+    def predict(self, PATH):
 
-        #take initial data
+        # take initial data
         data_init = self.take_data()
-        #take previous close date
+        # take previous close date
         prev_date = data_init.index[-1]
         previous_date = str((prev_date.strftime("%Y-%m-%d")))
 
-
         ################# edw exoume 8ema ###############
-        #take prediction date
+        # take prediction date
         data_alt = eth_data_collector.yahoo_retriever()
+        if self.past is not None:
+            data_alt = data_alt[:-(self.past - 1)]
+
         pred_date = data_alt.index[-1]
         prediction_date = str((pred_date.strftime("%Y-%m-%d")))
         #######################################
 
-        #no date
+        # no date
         data_init.reset_index(inplace=True)
         data_init = data_init.iloc[:, 1:]  # no date
 
-        #load model
+        # load model
         model = keras.models.load_model(PATH)
 
-        #predict
+        # predict
         data_preprocessed = self.preprocess()
         data_preprocessed = data_preprocessed.values
         data_preprocessed = data_preprocessed.reshape(1, self.LAG, 6)
@@ -75,7 +80,7 @@ class eth_predictor_1:
 
         if predict > previous_close:
             signal = 'UP'
-            return signal, predict, prediction_date, previous_close,previous_date
+            return signal, predict, prediction_date, previous_close, previous_date
         elif predict < previous_close:
             signal = 'DOWN'
             return signal, predict, prediction_date, previous_close, previous_date

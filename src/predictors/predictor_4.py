@@ -3,26 +3,30 @@ from tensorflow import keras
 
 from src.data_collector import retrieve_data
 from src.rolling import rolling_zscore
-import pandas_ta as ta
 
 tf.random.set_seed(42)
 
-class predictor_4:
-    def __init__(self,LAG):
-        self.LAG = LAG
 
+class predictor_4:
+    def __init__(self, lag, past):
+        self.LAG = lag
+        self.past = past
 
     def take_data(self):
 
-        #retrieve data
+        # retrieve data
         data = retrieve_data()
-        data = data[:-1]
-        data = data.tail(self.LAG*2)
+        if self.past is None:
+            data = data[:-1]
+        else:
+            data = data[:-self.past]
+
+        data = data.tail(self.LAG * 2)
         return data
 
     def preprocess(self):
 
-        #preprocess data
+        # preprocess data
         data = self.take_data()
         # rolling z-score
         roll_z = rolling_zscore(window=self.LAG)
@@ -31,30 +35,31 @@ class predictor_4:
 
         return data_scaled
 
-    def predict(self,PATH):
+    def predict(self, PATH):
 
-        #take initial data
+        # take initial data
         data_init = self.take_data()
 
-        #take previous close date
+        # take previous close date
         prev_date = data_init.index[-1]
         previous_date = str((prev_date.strftime("%Y-%m-%d")))
 
-        #take prediction date
+        # take prediction date
         data_alt = retrieve_data()
+        if self.past is not None:
+            data_alt = data_alt[:-(self.past - 1)]
+
         pred_date = data_alt.index[-1]
         prediction_date = str((pred_date.strftime("%Y-%m-%d")))
 
-        #no date
+        # no date
         data_init.reset_index(inplace=True)
         data_init = data_init.iloc[:, 1:]  # no date
 
-
-
-        #load model
+        # load model
         model = keras.models.load_model(PATH)
 
-        #predict
+        # predict
         data_preprocessed = self.preprocess()
         data_preprocessed = data_preprocessed.values
         data_preprocessed = data_preprocessed.reshape(1, self.LAG, 6)
@@ -77,16 +82,7 @@ class predictor_4:
 
         if predict > previous_close:
             signal = 'UP'
-            return signal, predict, prediction_date, previous_close,previous_date
+            return signal, predict, prediction_date, previous_close, previous_date
         elif predict < previous_close:
             signal = 'DOWN'
             return signal, predict, prediction_date, previous_close, previous_date
-
-
-
-
-
-
-
-
-

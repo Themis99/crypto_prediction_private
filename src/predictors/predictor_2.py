@@ -8,15 +8,19 @@ tf.random.set_seed(42)
 
 
 class predictor_2:
-    def __init__(self, LAG, past):
-        self.LAG = LAG
+    def __init__(self, lag, past):
+        self.LAG = lag
         self.past = past
 
     def take_data(self):
 
         # retrieve data
         data = retrieve_data()
-        data = data[:-self.past]
+        if self.past is None:
+            data = data[:-1]
+        else:
+            data = data[:-self.past]
+
         data = data.tail(self.LAG * 2 + 1)
         return data
 
@@ -42,10 +46,10 @@ class predictor_2:
 
         # take prediction date
         data_alt = retrieve_data()
-        data_alt = data_alt[:-(self.past - 1)]
-        # print(data_alt)
+        if self.past is not None:
+            data_alt = data_alt[:-(self.past - 1)]
+
         pred_date = data_alt.index[-1]
-        # print(pred_date)
         prediction_date = str((pred_date.strftime("%Y-%m-%d")))
 
         # no date

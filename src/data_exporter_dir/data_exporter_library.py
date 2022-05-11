@@ -7,9 +7,34 @@ from src import data_collector
 print_info = False  # True
 
 
-def winloss(previous_prediction, previous_signal, past):
+def winloss(previous_prediction, previous_signal):
     # take data
-    data = data_collector.retrieve_data2(past)
+    data = data_collector.retrieve_data_win_loss()
+
+    # take previous close
+    previous_close = round(data.tail(1)['Close'].item(), 2)
+
+    # προ-προ-χθεσινό close
+    previous_previous_close = round(data[:-1].tail(1)['Close'].item(), 2)
+
+    #  what signal really happened
+    real_signal = 'UP' if previous_previous_close < previous_close else 'DOWN'
+
+    # Compare the two signals WIN if signals are the same or else loss
+    trade = 'WIN' if real_signal == previous_signal else 'LOSS'
+
+    # If trade is win take the difference from real close and the predicted close
+    # if real_signal == previous_signal else None
+    out = int(abs(previous_close - previous_prediction))
+
+    print('previous_close : [ ' + str(previous_close) + ' ] , previous_previous_close  : [ ' + str(
+        previous_previous_close) + ' ] , previous_prediction : [ ' + str(previous_prediction) + ' ]')
+    return trade, out
+
+
+def winloss_past_dates(previous_prediction, previous_signal, past):
+    # take data
+    data = data_collector.retrieve_data_past_dates(past)
 
     # take previous close
     previous_close = round(data.tail(1)['Close'].item(), 2)
@@ -80,7 +105,13 @@ def export_data(export_file_name, is_fake_data, model, prediction, prev_close, s
     if prev_date in json_data[model]:
         previous_prediction = json_data[model][prev_date]['prediction']
         previous_signal = json_data[model][prev_date]['signal']
-        win, out = winloss(previous_prediction, previous_signal, past)
+        win = None
+        out = None
+        if past is None:
+            win, out = winloss(previous_prediction, previous_signal)
+        else:
+            win, out = winloss_past_dates(previous_prediction, previous_signal, past)
+
         data = json_data[model][prev_date]
         json_data[model][prev_date] = {
             'end_date': data['end_date'],
