@@ -104,18 +104,24 @@ if __name__ == "__main__":
     print_to_console = False
 
     if not back_testing:
-        predict(btc_models_path, 'btc_model_1', btc_export_file_name, None, print_to_console)
-        time.sleep(0.6)
-        predict(btc_models_path, 'btc_model_2', btc_export_file_name, None, print_to_console)
-        time.sleep(0.6)
-        predict(btc_models_path, 'btc_model_3', btc_export_file_name, None, print_to_console)
-        time.sleep(0.6)
-        predict(btc_models_path, 'btc_model_4', btc_export_file_name, None, print_to_console)
-        time.sleep(0.6)
-        predict(ethereum_models_path, 'eth_model_1', ethereum_export_file_name, None, print_to_console)
-        time.sleep(0.6)
-        predict(ethereum_models_path, 'eth_model_2', ethereum_export_file_name, None, print_to_console)
-        time.sleep(0.6)
+        run_bitcoin = True
+        run_ethereum = False
+
+        if run_bitcoin:
+            predict(btc_models_path, 'btc_model_1', btc_export_file_name, None, print_to_console)
+            time.sleep(0.6)
+            predict(btc_models_path, 'btc_model_2', btc_export_file_name, None, print_to_console)
+            time.sleep(0.6)
+            predict(btc_models_path, 'btc_model_3', btc_export_file_name, None, print_to_console)
+            time.sleep(0.6)
+            predict(btc_models_path, 'btc_model_4', btc_export_file_name, None, print_to_console)
+            time.sleep(0.6)
+
+        if run_ethereum:
+            predict(ethereum_models_path, 'eth_model_1', ethereum_export_file_name, None, print_to_console)
+            time.sleep(0.6)
+            predict(ethereum_models_path, 'eth_model_2', ethereum_export_file_name, None, print_to_console)
+            time.sleep(0.6)
 
     else:
         # How many days back to go on back testing
