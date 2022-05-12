@@ -100,7 +100,7 @@ if __name__ == "__main__":
     ethereum_models_path = '../models/ethereum/'
     ethereum_export_file_name = 'eth_data'
 
-    back_testing = True
+    back_testing = False
     print_to_console = False
 
     if not back_testing:
@@ -119,13 +119,13 @@ if __name__ == "__main__":
 
     else:
         # How many days back to go on back testing
-        n_days = 250
+        n_days = 260
 
         btc_data_past_dates = 'btc_data_past_dates'
         eth_data_past_dates = 'eth_data_past_dates'
 
         print_time_now()
-        predict_for_past_days(btc_models_path, 'btc_model_2', btc_data_past_dates, n_days, print_to_console)
+        # predict_for_past_days(btc_models_path, 'btc_model_2', btc_data_past_dates, n_days, print_to_console)
         print_time_now()
         time.sleep(0.6)
         predict_for_past_days(ethereum_models_path, 'eth_model_1', eth_data_past_dates, n_days, print_to_console)
