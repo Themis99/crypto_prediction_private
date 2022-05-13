@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
     if not back_testing:
         run_bitcoin = True
-        run_ethereum = False
+        run_ethereum = True
 
         if run_bitcoin:
             predict(btc_models_path, 'btc_model_1', btc_export_file_name, None, print_to_console)
